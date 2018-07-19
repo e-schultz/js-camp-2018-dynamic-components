@@ -26,7 +26,7 @@
       </div>
       <!-- <from-store schemaName="address" v-model="contact"></from-store>-->
       <div class="column">
-        <schema-edit schemaName="address"></schema-edit>
+        <schema-edit :schemaName="activeSchema"></schema-edit>
       </div>
       </div>
   </section>

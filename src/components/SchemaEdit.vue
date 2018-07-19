@@ -16,15 +16,7 @@
       <b-input v-model="field.props.options[index]"></b-input>
     </b-field>
     <text-input label="Add Option" v-model="newOption" @enter="addOption($event)"></text-input>
-    <br/> Change all:
-    <select-list label="Field Type" :options="registeredComponents" v-model="oldType"></select-list>
-    To:
-    <select-list label="Field Type" :options="registeredComponents" v-model="newType"></select-list>
-    <button class="button is-primary" @click="updateAll(oldType,newType)">
-      <b-icon icon="check"></b-icon>
-      <span>Go!</span>
-
-    </button>
+    <br/>
   </div>
   <div class="card-footer">
     <div class="card-footer-item">
@@ -48,7 +40,29 @@
     </div>
 
   </div>
+  <br/>
+  <b-collapse class="card">
+    <div slot="trigger" slot-scope="props" class="card-header">
+      <p class="card-header-title">
+        Something Silly
+      </p>
+      <a class="card-header-icon">
+        <b-icon :icon="props.open ? 'menu-down' : 'menu-up'">
+        </b-icon>
+      </a>
+    </div>
+    <div class="card-content">
+      Change all:
+      <select-list label="Field Type" :options="registeredComponents" v-model="oldType"></select-list>
+      To:
+      <select-list label="Field Type" :options="registeredComponents" v-model="newType"></select-list>
+      <button class="button is-primary" @click="updateAll(oldType,newType)">
+        <b-icon icon="check"></b-icon>
+        <span>Go!</span>
 
+      </button>
+    </div>
+  </b-collapse>
 </section>
 </template>
 
