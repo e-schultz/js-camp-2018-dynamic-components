@@ -1,20 +1,21 @@
 <template>
-    <section>      
-      
-      <contact-details v-model="contact"></contact-details>
-      <address-details v-model="contact"></address-details>
-    </section>
+  <section class="is-prop-child">
+      <component :is="activeView" v-model="contact">
+      </component>
+  </section>    
 </template>
 
 <script>
 // @ is an alias to /src
 
 export default {
-  name: "home",
+  name: "IsProp",
   components: {
     ContactDetails: () => import("@/components/ContactDetails"),
-    AddressDetails: () => import("@/components/AddressDetails")
+    AddressDetails: () => import("@/components/AddressDetails"),
+    SwitchToggle: () => import("@/components/FormControls/SwitchToggle")
   },
+  props: ["activeView"],
   data() {
     return {
       contact: {
@@ -33,3 +34,8 @@ export default {
   }
 };
 </script>
+<style>
+.markup-demo-wrap {
+  border: 1px solid black;
+}
+</style>
