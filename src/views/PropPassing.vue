@@ -1,5 +1,5 @@
 <template>
-  <section class="prop-passing-wrapper">
+  <section class="prop-passing-wrapper sectionn">
    <radio-group :options="options" v-model="activeView"></radio-group>
     <br/>
     
