@@ -31,16 +31,14 @@ export default {
     ContactView: () => import("@/components/ContactView"),
     ContactDetails: () => import("@/components/ContactDetails"),
     SwitchToggle: () => import("@/components/FormControls/SwitchToggle"),
-    RadioGroup: () => import("@/components/FormControls/RadioGroup")
+    RadioGroup: () => import("@/components/FormControls/RadioGroup"),
+    CompositeView: () => import("@/components/CompositeView")
   },
-  computed: {
-    activeView: function() {
-      return this.isContact ? "ContactView" : "AddressView";
-    }
-  },
+
   data() {
     return {
       options: ["AddressView", "ContactView", "CompositeView"],
+      activeView: "AddressView",
       isContact: true,
       contact: {
         firstName: "Evan",

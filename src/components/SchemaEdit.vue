@@ -12,18 +12,19 @@
     <select-list label="Field Type" :options="registeredComponents" v-model="field.fieldType"></select-list>
     <b-field label="Options" v-if="field.props.options.length >0">
     </b-field>
-    <b-field v-if="field.props.options.length >0" v-for="(option,index) in field.props.options" :key="index" >
+    <b-field v-if="field.props.options.length >0" v-for="(option,index) in field.props.options" :key="index">
       <b-input v-model="field.props.options[index]"></b-input>
     </b-field>
-     <text-input label="Add Option" v-model="newOption" @enter="addOption($event)"></text-input>
-     <br/>
-     Change all: <select-list label="Field Type" :options="registeredComponents" v-model="oldType"></select-list>
-     To:  <select-list label="Field Type" :options="registeredComponents" v-model="newType"></select-list>
-      <button class="button is-primary" @click="updateAll(oldType,newType)">
-        <b-icon icon="check"></b-icon>
-        <span>Go!</span>
-        
-      </button>
+    <text-input label="Add Option" v-model="newOption" @enter="addOption($event)"></text-input>
+    <br/> Change all:
+    <select-list label="Field Type" :options="registeredComponents" v-model="oldType"></select-list>
+    To:
+    <select-list label="Field Type" :options="registeredComponents" v-model="newType"></select-list>
+    <button class="button is-primary" @click="updateAll(oldType,newType)">
+      <b-icon icon="check"></b-icon>
+      <span>Go!</span>
+
+    </button>
   </div>
   <div class="card-footer">
     <div class="card-footer-item">
@@ -37,14 +38,15 @@
         <b-icon icon="check"></b-icon>
         <span>Empty Schema</span>
       </button>
-    </div><div class="card-footer-item">
-        <button class="button is-primary" @click="rebuildSchema">
+    </div>
+    <div class="card-footer-item">
+      <button class="button is-primary" @click="rebuildSchema">
         <b-icon icon="check"></b-icon>
         <span>Rebuild Schema</span>
-        
+
       </button>
-      </div>
-    
+    </div>
+
   </div>
 
 </section>

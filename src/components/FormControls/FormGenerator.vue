@@ -1,5 +1,6 @@
 <template>
   <div>
+    <form>
     <component v-for="(field, index) in schema"
                :key="index"
                :is="field.fieldType"
@@ -7,6 +8,7 @@
                @input="updateForm(field.name, $event)"
                v-bind="field.props">
     </component>
+    </form>
   </div>
 </template>
 
