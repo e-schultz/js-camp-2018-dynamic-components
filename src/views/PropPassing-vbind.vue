@@ -4,10 +4,8 @@
           {{activeView}}
     </switch-toggle>
     <br/>
-    
-<component :is="activeView"
-  v-bind="contact">
-</component>
+    <component :is="activeView" v-bind="contact"/>
+
     
   </section>    
 </template>

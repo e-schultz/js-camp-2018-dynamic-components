@@ -7,6 +7,7 @@
       <router-link to="/is-computed">Is Computed</router-link> |
       <router-link to="/is-prop">Is Prop</router-link> |
       <router-link to="/prop-passing">Prop Passing</router-link> |
+      <router-link to="/dynamic-form">Dynamic Form</router-link> |
       <router-link to="/vuex-demo">Vuex Demo</router-link> |
     </div>
     <div class="container">

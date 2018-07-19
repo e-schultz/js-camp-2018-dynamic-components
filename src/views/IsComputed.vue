@@ -1,23 +1,6 @@
 <template>
   <section class="is-computed-container section">
-    <!--<section class="level">
-      <div class="level-left">
-        <div class="level-item">
-          Data Value: isContact
-        </div>
-        <div class="level-item">
-          {{isContact}}
-        </div>
-      </div>
-            <div class="level-right">
-        <div class="level-item">
-          Computed Value: activeView
-        </div>
-        <div class="level-item">
-          {{activeView}}
-        </div>
-      </div>
-    </section>-->
+
     <switch-toggle v-model="isContact">
           {{activeView}}
     </switch-toggle>

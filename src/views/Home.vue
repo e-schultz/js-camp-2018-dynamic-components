@@ -5,11 +5,7 @@
           <li> <a href="https://js-camp-2018-dynamic-demo.now.sh/#/">Live Demo</a></li>
           <li> <a href="https://blog.rangle.io/how-to-create-data-driven-user-interfaces-in-vue/">Blog Post / Tutorial</a></li>
       </ul>
-hey
-      <!--
-      <contact-details v-model="contact"></contact-details>
-      <address-details v-model="contact"></address-details>
-      -->
+
     </section>
 </template>
 

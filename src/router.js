@@ -7,6 +7,7 @@ import IsComputed from "./views/IsComputed.vue";
 import IsPropContainer from "./views/IsPropContainer.vue";
 import PropPassing from "./views/PropPassing.vue";
 import VuexDemo from "./views/VuexDemo.vue";
+import DynamicForm from "./views/DynamicForm.vue";
 
 Vue.use(Router);
 
@@ -46,6 +47,12 @@ export default new Router({
       path: "/vuex-demo",
       name: "vuex-demo",
       component: VuexDemo
+    },
+
+    {
+      path: "/dynamic-form",
+      name: "dynamic-form",
+      component: DynamicForm
     }
   ]
 });
