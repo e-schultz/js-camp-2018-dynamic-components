@@ -16,7 +16,7 @@
 // @ is an alias to /src
 
 export default {
-  name: "PropPassing",
+  name: "PropPassingVBind",
   components: {
     IsProp: () => import("@/views/IsProp"),
     AddressDetails: () => import("@/components/AddressDetails"),

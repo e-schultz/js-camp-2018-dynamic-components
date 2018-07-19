@@ -1,6 +1,6 @@
 <template>
-  <section class="is-computed-container">
-    <section class="level">
+  <section class="is-computed-container section">
+    <!--<section class="level">
       <div class="level-left">
         <div class="level-item">
           Data Value: isContact
@@ -17,7 +17,7 @@
           {{activeView}}
         </div>
       </div>
-    </section>
+    </section>-->
     <switch-toggle v-model="isContact">
           {{activeView}}
     </switch-toggle>
@@ -35,7 +35,7 @@
 // @ is an alias to /src
 
 export default {
-  name: "IsComputedf",
+  name: "IsComputed",
   components: {
     ContactDetails: () => import("@/components/ContactDetails"),
     AddressDetails: () => import("@/components/AddressDetails"),

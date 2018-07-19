@@ -18,7 +18,6 @@ export default {
   props: ["activeView"],
   data() {
     return {
-      isContact: true,
       contact: {
         firstName: "Evan",
         lastName: "Schultz",

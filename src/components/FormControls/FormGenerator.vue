@@ -20,6 +20,7 @@ export default {
     EmailInput: () => import("@/components/FormControls/EmailInput"),
     RadioGroup: () => import("@/components/FormControls/RadioGroup"),
     SwitchToggle: () => import("@/components/FormControls/SwitchToggle"),
+    Dropdown: () => import("@/components/FormControls/Dropdown"),
     BasicInput: () => import("@/components/FormControls/BasicInput")
   },
   props: ["schema", "value"],

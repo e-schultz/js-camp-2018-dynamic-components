@@ -18,7 +18,8 @@ export default {
     PasswordInput: () => import("@/components/FormControls/PasswordInput"),
     SelectList: () => import("@/components/FormControls/SelectList"),
     EmailInput: () => import("@/components/FormControls/EmailInput"),
-    SwitchToggle: () => import("@/components/FormControls/SwitchToggle")
+    SwitchToggle: () => import("@/components/FormControls/SwitchToggle"),
+    Dropdown: () => import("@/components/FormControls/Dropdown")
   },
   props: ["schemaName", "value"],
   data() {

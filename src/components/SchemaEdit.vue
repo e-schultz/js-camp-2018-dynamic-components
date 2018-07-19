@@ -16,6 +16,14 @@
       <b-input v-model="field.props.options[index]"></b-input>
     </b-field>
      <text-input label="Add Option" v-model="newOption" @enter="addOption($event)"></text-input>
+     <br/>
+     Change all: <select-list label="Field Type" :options="registeredComponents" v-model="oldType"></select-list>
+     To:  <select-list label="Field Type" :options="registeredComponents" v-model="newType"></select-list>
+      <button class="button is-primary" @click="updateAll(oldType,newType)">
+        <b-icon icon="check"></b-icon>
+        <span>Go!</span>
+        
+      </button>
   </div>
   <div class="card-footer">
     <div class="card-footer-item">
@@ -66,6 +74,8 @@ export default {
   data() {
     return {
       newOption: undefined,
+      oldType: undefined,
+      newType: undefined,
       field: {
         name: undefined,
         props: {
@@ -80,7 +90,8 @@ export default {
         "PasswordInput",
         "SelectList",
         "EmailInput",
-        "SwitchToggle"
+        "SwitchToggle",
+        "Dropdown"
       ]
     };
   },
@@ -90,6 +101,13 @@ export default {
     }
   },
   methods: {
+    updateAll(oldType, newType) {
+      this.$store.commit("changeType", {
+        schemaName: this.schemaName,
+        oldType,
+        newType
+      });
+    },
     addOption(value) {
       this.field.props.options = [...this.field.props.options, value];
       this.newOption = undefined;
@@ -97,7 +115,7 @@ export default {
     addFieldToSchema() {
       let { props, fieldType, name } = this.field;
       this.$store.commit("addField", {
-        schemaName: "contact",
+        schemaName: this.schemaName,
         field: {
           fieldType,
           name,
@@ -106,7 +124,7 @@ export default {
       });
     },
     emptySchema() {
-      this.$store.commit("emptySchema", { schemaName: "contact" });
+      this.$store.commit("emptySchema", { schemaName: this.schemaName });
     },
     rebuildSchema() {
       let newSchema = [

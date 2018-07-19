@@ -20,7 +20,7 @@ export default new Vuex.Store({
           props: {}
         },
         {
-          fieldType: "SelectList",
+          fieldType: "Dropdown",
           name: "country",
           props: {
             label: "Country",
@@ -85,6 +85,20 @@ export default new Vuex.Store({
     },
     emptySchema: function(state, { schemaName }) {
       state.schemas[schemaName] = [];
+    },
+    changeType: function(state, { schemaName, oldType, newType }) {
+      /*
+      state.schemas[schemaName].forEach(n => {
+        if (n.fieldType === oldType) {
+          n.fieldType = newType;
+        }
+      });*/
+      state.schemas[schemaName] = state.schemas[schemaName].map(n => {
+        if (n.fieldType === oldType) {
+          n.fieldType = newType;
+        }
+        return n;
+      });
     }
   }
   //actions: {

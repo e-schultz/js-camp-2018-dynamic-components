@@ -1,8 +1,12 @@
 <template>
-  <section class="markup-demo-container">
+  <section class="markup-demo-container section">
    <radio-group :options="options" v-model="activeView"></radio-group>
     <br/>
-    <section class="markup-demo-wrap card">      
+    <section class="markup-demo-wrap card">     
+      <comment>
+Notice how there are no additional elements introduced around `component` 
+or the child it is rendering.
+      </comment>
       <component :is="activeView" v-model="contact" class="card-content">
       </component>
     </section>
@@ -13,7 +17,8 @@
 // @ is an alias to /src
 
 export default {
-  name: "home",
+  name: "MarkupDemo",
+  comments: true,
   components: {
     ContactDetails: () => import("@/components/ContactDetails"),
     AddressDetails: () => import("@/components/AddressDetails"),

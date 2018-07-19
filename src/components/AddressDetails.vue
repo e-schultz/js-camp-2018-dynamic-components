@@ -1,18 +1,15 @@
 <template>
-  
-    <form-generator :schema="schema" 
-      v-model="address" class="address-details">
-
+  <section class="address-details">
+    <form-generator :schema="schema"  v-model="address">
     </form-generator>
-    
-  
+  </section>
 </template>
 
 <script>
 // @ is an alias to /src
 // at the most basic, a field needs name and a value
 export default {
-  name: "ContactDetails",
+  name: "AddressDetails",
   components: {
     FormGenerator: () => import("@/components/FormControls/FormGenerator")
   },

@@ -7,13 +7,13 @@
             <h1 class="card-header-title">Contact Form</h1>
           </div>
           <div class="card-content">
-            <from-store schemaName="contact" v-model="contact"></from-store>
+            <from-store schemaName="address" v-model="contact"></from-store>
           </div>
         </div>
       </div>
       <!-- <from-store schemaName="address" v-model="contact"></from-store>-->
       <div class="column">
-        <schema-edit schemaName="contact"></schema-edit>
+        <schema-edit schemaName="address"></schema-edit>
       </div>
       </div>
   </section>
@@ -23,7 +23,7 @@
 // @ is an alias to /src
 
 export default {
-  name: "home",
+  name: "VuexDemo",
   components: {
     FromStore: () => import("@/components/FromStore"),
     SchemaEdit: () => import("@/components/SchemaEdit")
