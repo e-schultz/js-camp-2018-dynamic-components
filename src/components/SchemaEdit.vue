@@ -102,6 +102,7 @@ export default {
         fieldType: undefined
       },
       registeredComponents: [
+        "",
         "TextInput",
         "PasswordInput",
         "SelectList",
