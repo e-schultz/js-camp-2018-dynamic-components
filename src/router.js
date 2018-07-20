@@ -1,13 +1,13 @@
 import Vue from "vue";
 import Router from "vue-router";
-import Home from "./views/Home.vue";
-import About from "./views/About.vue";
-import MarkupDemo from "./views/MarkupDemo.vue";
-import IsComputed from "./views/IsComputed.vue";
-import IsPropContainer from "./views/IsPropContainer.vue";
-import PropPassing from "./views/PropPassing.vue";
-import VuexDemo from "./views/VuexDemo.vue";
-import DynamicForm from "./views/DynamicForm.vue";
+// import Home from "./views/Home.vue";
+// import About from "./views/About.vue";
+// import MarkupDemo from "./views/MarkupDemo.vue";
+// import IsComputed from "./views/IsComputed.vue";
+// import IsPropContainer from "./views/IsPropContainer.vue";
+// import PropPassing from "./views/PropPassing.vue";
+// import VuexDemo from "./views/VuexDemo.vue";
+// import DynamicForm from "./views/DynamicForm.vue";
 
 Vue.use(Router);
 
@@ -16,43 +16,43 @@ export default new Router({
     {
       path: "/",
       name: "home",
-      component: Home
+      component: () => import("./views/Home.vue")
     },
     {
       path: "/about",
       name: "about",
-      component: About
+      component: () => import("./views/About.vue")
     },
     {
       path: "/markup-demo",
       name: "markupDemo",
-      component: MarkupDemo
+      component: () => import("./views/MarkupDemo.vue")
     },
     {
       path: "/is-computed",
       name: "isComputed",
-      component: IsComputed
+      component: () => import("./views/IsComputed.vue")
     },
     {
       path: "/is-prop",
       name: "isProp",
-      component: IsPropContainer
+      component: () => import("./views/IsPropContainer.vue")
     },
     {
       path: "/prop-passing",
       name: "propPassing",
-      component: PropPassing
+      component: () => import("./views/PropPassing.vue")
     },
     {
       path: "/vuex-demo",
       name: "vuex-demo",
-      component: VuexDemo
+      component: () => import("./views/VuexDemo.vue")
     },
 
     {
       path: "/dynamic-form",
       name: "dynamic-form",
-      component: DynamicForm
+      component: () => import("./views/DynamicForm.vue")
     }
   ]
 });
