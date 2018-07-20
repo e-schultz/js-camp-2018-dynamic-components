@@ -10,6 +10,7 @@
     "start": "serve ./dist --single"
   },
   "dependencies": {
+    "@mdi/font": "^2.5.94",
     "buefy": "^0.6.6",
     "camelcase": "^5.0.0",
     "serve": "^9.2.0",

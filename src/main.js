@@ -5,6 +5,7 @@ import store from "./store";
 import Comment from "./components/Comment";
 import Buefy from "buefy";
 import "buefy/lib/buefy.css";
+import "@mdi/font/css/materialdesignicons.css";
 
 Vue.use(Buefy);
 Vue.config.productionTip = false;
