@@ -3,9 +3,9 @@
 
 Example App For [JS Camp 2018 in Barcelona](https://jscamp.tech/) on [How to Create](How to Create 'Vuetiful' Data-Driven User Interfaces)
 
-* [Live Demo](https://js-camp-2018-dynamic-demo.now.sh/#/)
-* Slides - TBC
-* [Blog Post](https://blog.rangle.io/how-to-create-data-driven-user-interfaces-in-vue/)
+* [Live Demo](http://bit.ly/js-camp-bcn-demo)
+* [Slides](http://bit.ly/js-camp-2018-slides)
+* [Blog Post](http://bit.ly/data-driven-vue)
 
 ## Created using
 
