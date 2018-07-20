@@ -5,7 +5,6 @@
           <li> <a href="https://js-camp-2018-dynamic-demo.now.sh/#/">Live Demo</a></li>
           <li> <a href="https://blog.rangle.io/how-to-create-data-driven-user-interfaces-in-vue/">Blog Post / Tutorial</a></li>
       </ul>
-
     </section>
 </template>
 
